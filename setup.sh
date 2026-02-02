@@ -10,8 +10,14 @@ vim +'PlugInstall --sync' +qa
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-# Install zsh and oh-my-zsh
-sudo apt install zsh
+# Check if zsh is installed
+if ! command -v zsh >/dev/null 2>&1; then
+    echo "Installing zsh..."
+    sudo apt update
+    sudo apt install -y zsh
+else
+    echo "zsh is already installed, skipping..."
+fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install brew
