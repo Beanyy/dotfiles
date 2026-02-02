@@ -8,7 +8,7 @@ vim +'PlugInstall --sync' +qa
 
 # Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install --all --no-zsh --no-update-rc
 
 # Check if zsh is installed
 if ! command -v zsh >/dev/null 2>&1; then
