@@ -120,6 +120,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
-if command -v tmux &> /dev/null && [[ -z "$TMUX" ]] && [[ -n "$PS1" ]]; then
-    exec tmux new-session -A -s main
-fi
+# Uncomment this is you want to start tmux automaticaly
+#if command -v tmux &> /dev/null && [[ -z "$TMUX" ]] && [[ -n "$PS1" ]]; then
+#    exec tmux new-session -A -s main
+#fi
